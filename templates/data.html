@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Collection - GIC Student Progress Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='logo.jpg') }}" alt="University of Glasgow Banner" class="banner">
+            <h1>Data Collection</h1>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Welcome</a></li>
+                    <li><a href="{{ url_for('information') }}">Information</a></li>
+                    <li><a href="{{ url_for('data') }}">Data Collection</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h2>Student Progress Questionnaire</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="student_number">Student Number:</label>
+                <input type="text" id="student_number" name="student_number"><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="course">Programme of study:</label>
+                <input type="text" id="course" name="course"><br>
+
+                <label for="grades">Grades Obtained:</label>
+                <input type="text" id="grades" name="grades"><br>
+
+                <label for="satisfaction">Overall Satisfaction:</label>
+                <select id="satisfaction" name="satisfaction">
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select><br>
+
+                <label for="suggestions">Suggestions for Improvement:</label>
+                <textarea id="suggestions" name="suggestions"></textarea><br>
+
+                <input type="submit" value="Submit">
+            </form>
+        </main>
+        <footer>
+            <p>&copy; 2024 GIC Student Progress Tracker</p>
+        </footer>
+    </div>
+</body>
+</html>
