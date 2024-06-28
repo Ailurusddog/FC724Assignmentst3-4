@@ -20,35 +20,36 @@
         </header>
         <main>
             <h2>Student Progress Questionnaire</h2>
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name"><br>
+            <form method="POST">
+                {{ form.hidden_tag() }}
+                <label for="name">{{ form.name.label }}</label>
+                {{ form.name(size=32) }}<br>
 
-                <label for="student_number">Student Number:</label>
-                <input type="text" id="student_number" name="student_number"><br>
+                <label for="student_number">{{ form.student_number.label }}</label>
+                {{ form.student_number(size=32) }}<br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email"><br>
+                <label for="email">{{ form.email.label }}</label>
+                {{ form.email(size=32) }}<br>
 
-                <label for="course">Programme of study:</label>
-                <input type="text" id="course" name="course"><br>
+                <label for="course">{{ form.course.label }}</label>
+                {{ form.course(size=32) }}<br>
 
-                <label for="grades">Grades Obtained:</label>
-                <input type="text" id="grades" name="grades"><br>
+                <label for="grades">{{ form.grades.label }}</label>
+                {{ form.grades(size=32) }}<br>
 
-                <label for="satisfaction">Overall Satisfaction:</label>
-                <select id="satisfaction" name="satisfaction">
-                    <option value="very_satisfied">Very Satisfied</option>
-                    <option value="satisfied">Satisfied</option>
-                    <option value="neutral">Neutral</option>
-                    <option value="dissatisfied">Dissatisfied</option>
-                    <option value="very_dissatisfied">Very Dissatisfied</option>
-                </select><br>
+                <label for="short_term_goal">{{ form.short_term_goal.label }}</label>
+                {{ form.short_term_goal(size=32) }}<br>
 
-                <label for="suggestions">Suggestions for Improvement:</label>
-                <textarea id="suggestions" name="suggestions"></textarea><br>
+                <label for="long_term_goal">{{ form.long_term_goal.label }}</label>
+                {{ form.long_term_goal(cols=32, rows=4) }}<br>
 
-                <input type="submit" value="Submit">
+                <label for="satisfaction">{{ form.satisfaction.label }}</label>
+                {{ form.satisfaction() }}<br>
+
+                <label for="improvement">{{ form.improvement.label }}</label>
+                {{ form.improvement() }}<br>
+
+                {{ form.submit() }}
             </form>
         </main>
         <footer>
