@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Collection - GIC Student Progress Tracker</title>
+    <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
+        <!-- Header section -->
         <header>
+            <!-- University of Glasgow Banner image -->
             <img src="{{ url_for('static', filename='logo.jpg') }}" alt="University of Glasgow Banner" class="banner">
             <h1>Data Collection</h1>
+            <!-- Navigation menu -->
             <nav>
                 <ul>
+                    <!-- Navigation links to different pages -->
                     <li><a href="{{ url_for('home') }}">Welcome</a></li>
                     <li><a href="{{ url_for('information') }}">Information</a></li>
                     <li><a href="{{ url_for('data') }}">Data Collection</a></li>
@@ -20,38 +25,52 @@
         </header>
         <main>
             <h2>Student Progress Questionnaire</h2>
+            <!-- Form to collect student progress data, using WTForms for fields -->
             <form method="POST">
+                <!-- CSRF token for security -->
                 {{ form.hidden_tag() }}
+
+                <!-- Name field -->
                 <label for="name">{{ form.name.label }}</label>
                 {{ form.name(size=32) }}<br>
 
+                <!-- Student Number field -->
                 <label for="student_number">{{ form.student_number.label }}</label>
                 {{ form.student_number(size=32) }}<br>
 
+                <!-- Email field -->
                 <label for="email">{{ form.email.label }}</label>
                 {{ form.email(size=32) }}<br>
 
+                <!-- Programme of Study field -->
                 <label for="course">{{ form.course.label }}</label>
                 {{ form.course(size=32) }}<br>
 
+                <!-- Grades Obtained field -->
                 <label for="grades">{{ form.grades.label }}</label>
                 {{ form.grades(size=32) }}<br>
 
+                <!-- Short Term Goal field -->
                 <label for="short_term_goal">{{ form.short_term_goal.label }}</label>
                 {{ form.short_term_goal(size=32) }}<br>
 
+                <!-- Long Term Goal field -->
                 <label for="long_term_goal">{{ form.long_term_goal.label }}</label>
                 {{ form.long_term_goal(cols=32, rows=4) }}<br>
 
+                <!-- Overall Satisfaction field -->
                 <label for="satisfaction">{{ form.satisfaction.label }}</label>
                 {{ form.satisfaction() }}<br>
 
+                <!-- Suggestions for Improvement field -->
                 <label for="improvement">{{ form.improvement.label }}</label>
                 {{ form.improvement() }}<br>
 
+                <!-- Submit button -->
                 {{ form.submit() }}
             </form>
         </main>
+        <!-- Footer section -->
         <footer>
             <p>&copy; 2024 GIC Student Progress Tracker</p>
         </footer>

@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to GIC Student</title>
+    <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
+        <!-- Header section -->
         <header>
+            <!-- University of Glasgow Banner image -->
             <img src="{{ url_for('static', filename='logo.jpg') }}" alt="University of Glasgow Banner" class="banner">
             <h1>Welcome to GIC Student</h1>
+            <!-- Navigation menu -->
             <nav>
                 <ul>
+                    <!-- Navigation links to different pages -->
                     <li><a href="{{ url_for('home') }}">Welcome</a></li>
                     <li><a href="{{ url_for('information') }}">Information</a></li>
                     <li><a href="{{ url_for('data') }}">Data Collection</a></li>
@@ -20,10 +25,14 @@
         </header>
         <main>
             <h2>Introduction</h2>
+            <!-- Introduction paragraph about the website's purpose -->
             <p>This website is designed to assess and collect data on students' progress at GIC. Navigate through the sections to learn more and participate.</p>
+            <!-- Paragraph detailing the partnership and purpose of GIC -->
             <p>Kaplan and the University of Glasgow entered into a partnership to establish Glasgow International College (GIC) in 2007 with the first cohort of students joining the College in September 2007. GIC offers degree preparation courses in partnership with the University of Glasgow. Students have several course options at Glasgow International College, to prepare for an undergraduate or postgraduate degree at the University of Glasgow.</p>
+            <!-- Paragraph describing the courses and progression options available at GIC -->
             <p>GIC offers a Foundation Certificate and students who meet the criteria for progress to second year of particular undergraduate programmes at the University and Pre-Masters students who meet the criteria enter Masters programmes at the University.</p>
         </main>
+        <!-- Footer section -->
         <footer>
             <p>&copy; 2024 GIC Student Progress Tracker</p>
         </footer>

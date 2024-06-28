@@ -3,15 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Information - GIC Student Progress Tracker</title>
+    <!-- Link to the stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <div class="container">
+        <!-- Header section -->
         <header>
+            <!-- University of Glasgow Banner image -->
             <img src="{{ url_for('static', filename='logo.jpg') }}" alt="University of Glasgow Banner" class="banner">
             <h1>Information</h1>
+            <!-- Navigation menu -->
             <nav>
                 <ul>
+                    <!-- Navigation links to different pages -->
                     <li><a href="{{ url_for('home') }}">Welcome</a></li>
                     <li><a href="{{ url_for('information') }}">Information</a></li>
                     <li><a href="{{ url_for('data') }}">Data Collection</a></li>
@@ -20,8 +25,10 @@
         </header>
         <main>
             <h2>Introduction</h2>
+            <!-- Introduction paragraph about the website's purpose -->
             <p>This website is designed to assess and collect data on students' progress at GIC. Feedback and suggestions are also used to help schools further improve the student experience at school. Navigate through the sections to learn more and participate.</p>
         </main>
+        <!-- Footer section -->
         <footer>
             <p>&copy; 2024 GIC Student Progress Tracker</p>
         </footer>
